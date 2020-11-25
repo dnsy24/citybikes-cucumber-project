@@ -6,7 +6,13 @@
 
     <groupId>org.example</groupId>
     <artifactId>citybikes-cucumber-project</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>test-config</module>
+        <module>test-common</module>
+        <module>acceptance-test</module>
+    </modules>
 
     <properties>
         <!-- Project Properties -->
@@ -32,130 +38,132 @@
         <logback-classic.version>1.2.3</logback-classic.version>
     </properties>
 
-    <dependencies>
-        <!-- JUnit Jupiter -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit-jupiter-api.version}</version>
-            <scope>test</scope>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <!-- JUnit Jupiter -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit-jupiter-api.version}</version>
+                <scope>test</scope>
+            </dependency>
 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>${junit-jupiter-params.version}</version>
-            <scope>test</scope>
-        </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-params</artifactId>
+                <version>${junit-jupiter-params.version}</version>
+                <scope>test</scope>
+            </dependency>
 
-        <!-- Rest Assured -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${rest-assured.version}</version>
-            <!--            <scope>test</scope>-->
-        </dependency>
+            <!-- Rest Assured -->
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>${rest-assured.version}</version>
+                <!--            <scope>test</scope>-->
+            </dependency>
 
-        <!-- Cucumber Java -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>${cucumber-java.version}</version>
-        </dependency>
+            <!-- Cucumber Java -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-java</artifactId>
+                <version>${cucumber-java.version}</version>
+            </dependency>
 
-        <!-- Cucumber Junit-->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>${cucumber-junit.version}</version>
-        </dependency>
+            <!-- Cucumber Junit-->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-junit</artifactId>
+                <version>${cucumber-junit.version}</version>
+            </dependency>
 
-        <!-- Json Schema Validator -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>${rest-assured.version}</version>
-            <scope>test</scope>
-        </dependency>
+            <!-- Json Schema Validator -->
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>json-schema-validator</artifactId>
+                <version>${rest-assured.version}</version>
+                <scope>test</scope>
+            </dependency>
 
-        <!-- JTwig Template Engine -->
-        <dependency>
-            <groupId>org.jtwig</groupId>
-            <artifactId>jtwig-core</artifactId>
-            <version>5.87.0.RELEASE</version>
-            <!--            <scope>runtime</scope>-->
-        </dependency>
+            <!-- JTwig Template Engine -->
+            <dependency>
+                <groupId>org.jtwig</groupId>
+                <artifactId>jtwig-core</artifactId>
+                <version>5.87.0.RELEASE</version>
+                <!--            <scope>runtime</scope>-->
+            </dependency>
 
-        <!-- Jackson-Core -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${jackson-core.version}</version>
-        </dependency>
+            <!-- Jackson-Core -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson-core.version}</version>
+            </dependency>
 
-        <!-- Jackson Data Bind-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson-core.version}</version>
-        </dependency>
+            <!-- Jackson Data Bind-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-core.version}</version>
+            </dependency>
 
-        <!-- Jackson Annotations -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>${jackson-core.version}</version>
-        </dependency>
+            <!-- Jackson Annotations -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-core.version}</version>
+            </dependency>
 
-        <!-- Json Simple -->
-        <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>${json-simple.version}</version>
-        </dependency>
+            <!-- Json Simple -->
+            <dependency>
+                <groupId>com.googlecode.json-simple</groupId>
+                <artifactId>json-simple</artifactId>
+                <version>${json-simple.version}</version>
+            </dependency>
 
-        <!-- Owner -->
-        <dependency>
-            <groupId>org.aeonbits.owner</groupId>
-            <artifactId>owner</artifactId>
-            <version>${owner.version}</version>
-        </dependency>
+            <!-- Owner -->
+            <dependency>
+                <groupId>org.aeonbits.owner</groupId>
+                <artifactId>owner</artifactId>
+                <version>${owner.version}</version>
+            </dependency>
 
-        <!-- AssertJ -->
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj-core.version}</version>
-        </dependency>
+            <!-- AssertJ -->
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj-core.version}</version>
+            </dependency>
 
-        <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
+            <!-- Lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
-        <!-- SLF4J -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j-api.version}</version>
-        </dependency>
+            <!-- SLF4J -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j-api.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>
 
-        <!--LogBack -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback-classic.version}</version>
-        </dependency>
-    </dependencies>
+            <!--LogBack -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

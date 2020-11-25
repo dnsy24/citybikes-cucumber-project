@@ -1,0 +1,132 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1606097405.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "network"
+  ],
+  "properties": {
+    "network": {
+      "$id": "#root/network",
+      "title": "Network",
+      "type": "object",
+      "required": [
+        "company",
+        "href",
+        "id",
+        "location",
+        "name",
+        "stations"
+      ],
+      "properties": {
+        "company": {
+          "$id": "#root/network/company",
+          "title": "Company",
+          "type": "array",
+          "default": [],
+          "items":{
+            "$id": "#root/network/company/items",
+            "title": "Items",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Trek Bicycle Corporation"
+            ],
+            "pattern": "^.*$"
+          }
+        },
+        "href": {
+          "$id": "#root/network/href",
+          "title": "Href",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "/v2/networks/catbike"
+          ],
+          "pattern": "^.*$"
+        },
+        "id": {
+          "$id": "#root/network/id",
+          "title": "Id",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "catbike"
+          ],
+          "pattern": "^.*$"
+        },
+        "location": {
+          "$id": "#root/network/location",
+          "title": "Location",
+          "type": "object",
+          "required": [
+            "city",
+            "country",
+            "latitude",
+            "longitude"
+          ],
+          "properties": {
+            "city": {
+              "$id": "#root/network/location/city",
+              "title": "City",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "Savannah, GA"
+              ],
+              "pattern": "^.*$"
+            },
+            "country": {
+              "$id": "#root/network/location/country",
+              "title": "Country",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "US"
+              ],
+              "pattern": "^.*$"
+            },
+            "latitude": {
+              "$id": "#root/network/location/latitude",
+              "title": "Latitude",
+              "type": "number",
+              "examples": [
+                32.016667
+              ],
+              "default": 0.0
+            },
+            "longitude": {
+              "$id": "#root/network/location/longitude",
+              "title": "Longitude",
+              "type": "number",
+              "examples": [
+                -81.116667
+              ],
+              "default": 0.0
+            }
+          }
+        }
+      ,
+        "name": {
+          "$id": "#root/network/name",
+          "title": "Name",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "CAT Bike"
+          ],
+          "pattern": "^.*$"
+        },
+        "stations": {
+          "$id": "#root/network/stations",
+          "title": "Stations",
+          "type": "array",
+          "default": []
+        }
+      }
+    }
+
+  }
+}

@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
         plugin = {"json:target/cucumber.json", "html:target/cucumber-reports"},
         features = "src/main/resources/features/citybikes.feature",
         glue = {"citybikes/api/step/defs", "citybikes/api/entity"},
-        tags = "@testAl")
+        tags = "@testAll")
 public class RunCucumberAcceptanceIT {
 }

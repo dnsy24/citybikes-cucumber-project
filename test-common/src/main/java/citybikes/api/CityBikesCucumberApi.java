@@ -8,9 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class CityBikesCucumberApi {
     final static String URI = ConfigurationProvider.getInstance().getConfiguration().baseUrl();
-//    final static String URI = "http://api.citybik.es";
     final static String PATH = ConfigurationProvider.getInstance().getConfiguration().basePath();
-//    final static String PATH = "/v2/networks/";
 
     public static Response getAllNetworkData() {
         return given()

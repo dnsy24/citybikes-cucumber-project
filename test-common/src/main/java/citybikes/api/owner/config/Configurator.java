@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.Sources;
 
 //@Sources({"classpath:env/${env}.properties"})
-@Sources({"classpath:env/qa1.properties"})
+@Sources({"classpath:env/qa2.properties"})
 public interface Configurator extends Config {
 
     @Key("citybikes.base_url")

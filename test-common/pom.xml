@@ -27,6 +27,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- JUnit Vintage -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit-vintage.version}</version>
+        </dependency>
+
         <!-- Rest Assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>

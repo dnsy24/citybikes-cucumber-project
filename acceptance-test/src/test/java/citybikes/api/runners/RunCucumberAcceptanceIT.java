@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = {"citybikes/api/step/defs", "citybikes/api/entity"},
-        tags = "@testAll")
+        tags = "@testAll"
+)
 public class RunCucumberAcceptanceIT {
 }

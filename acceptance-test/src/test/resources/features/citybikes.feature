@@ -43,7 +43,6 @@ Feature: CityBikes Api Validation
       | longitude |
 
 
-    #   Contract testing
   @test4
   Scenario: Validate Json Schema of random company in network
     When User gets json response for a single company by random id

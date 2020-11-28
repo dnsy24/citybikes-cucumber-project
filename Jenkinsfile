@@ -1,6 +1,5 @@
 node {
         stage('Pull code from github'){
-           git branch: 'main'
            git 'https://github.com/dnsy24/citybikes-cucumber-project.git'
         }
 

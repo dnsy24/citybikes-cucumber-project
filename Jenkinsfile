@@ -1,6 +1,6 @@
 node {
         stage('Pull code from github'){
-           git 'https://github.com/dnsy24/citybike-cucumber-project.git'
+           git 'https://github.com/dnsy24/citybikes-cucumber-project.git'
         }
 
         stage('Run AcceptanceIT smoke test'){

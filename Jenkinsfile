@@ -4,7 +4,7 @@ node {
         }
 
         stage('Run AcceptanceIT smoke test'){
-            bat label: '', script: 'mvn test -Dcucumber.filter.tags="@testAll"'
+            bat label: '', script: 'mvn test -Dcucumber.filter.tags="@testAll" -Denv="qa2"'
         }
 
         stage('Generate cucumber report'){
